@@ -23,6 +23,11 @@ classifiers = [
     "Topic :: Text Processing :: Linguistic",
 ]
 
+[project.urls]
+Homepage = "https://github.com/solodevelopersai/bhasha-kit"
+Repository = "https://github.com/solodevelopersai/bhasha-kit"
+Issues = "https://github.com/solodevelopersai/bhasha-kit/issues"
+
 [project.optional-dependencies]
 dev = ["pytest>=7"]
 
