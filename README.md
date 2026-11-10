@@ -2,6 +2,8 @@
 
 Offline Python utilities for cleaning, detecting, transliterating, spelling, and analyzing Hindi, Bengali, and English text.
 
+[![PyPI version](https://img.shields.io/pypi/v/bhasha-kit)](https://pypi.org/project/bhasha-kit/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/bhasha-kit)](https://pypi.org/project/bhasha-kit/)
 [![Tests](https://github.com/solodevelopersai/bhasha-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/solodevelopersai/bhasha-kit/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
@@ -19,7 +21,13 @@ Offline Python utilities for cleaning, detecting, transliterating, spelling, and
 
 ## Installation
 
-Install directly from GitHub:
+Install from PyPI:
+
+```shell
+python -m pip install bhasha-kit
+```
+
+Or install directly from GitHub:
 
 ```shell
 python -m pip install git+https://github.com/solodevelopersai/bhasha-kit.git
@@ -31,6 +39,21 @@ For local development:
 git clone https://github.com/solodevelopersai/bhasha-kit.git
 cd bhasha-kit
 python -m pip install -e ".[dev]"
+```
+
+## Quick start
+
+```python
+from bhasha_kit import clean_text, number_to_words, analyze_sentiment
+
+clean_text("नमस्ते   😀 दोस्तों")
+# 'नमस्ते दोस्तों'
+
+number_to_words(1250, "hi")
+# 'एक हज़ार दो सौ पचास'
+
+analyze_sentiment("यह फिल्म बहुत अच्छी है")
+# {'label': 'positive', 'score': 1.0, 'lang': 'hi'}
 ```
 
 ## Usage
